@@ -1,6 +1,6 @@
 {
   "name": "tsc-jest-qs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "lib/index.js",
   "bin": "lib/index.js",
@@ -9,6 +9,7 @@
     "url": "https://github.com/amalej/tsc-jest-qs"
   },
   "scripts": {
+    "build": "tsc",
     "build:watch": "tsc --watch"
   },
   "license": "ISC",
