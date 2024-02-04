@@ -14,6 +14,6 @@ Run `npx tsc-jest-qs`
 - `build` script
   - `npm run build` - Compiles TypeScript code to JavaScrit
 - `build:watch` script
-  - `npm run build:watch` - Compiles TypeScript code to JavaScrit whenever there are any changes
+  - `npm run build:watch` - Compiles TypeScript code to JavaScript whenever there are any changes
 - `test` script
   - `npm run test` - Run the Jest test
