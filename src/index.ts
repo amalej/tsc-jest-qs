@@ -22,6 +22,9 @@ if (!packageJsonExists) {
 }
 
 // Create the `tsconfig.json` file
+// Install `typescript` first in the project as this is required to use `tsc`
+console.log(chalk.blue("[info] Installing `typescript`"));
+execSync("npm i --save-dev typescript", { stdio: "inherit" });
 console.log(chalk.blue("[info] Creating `tsconfig.json`"));
 execSync("npx tsc --init", { stdio: "inherit" });
 console.log(chalk.blue("[info] Modifying `tsconfig.json`"));
@@ -46,9 +49,8 @@ const indexFile = pathJoin(srcDir, "index.ts");
 mkdirSync(srcDir);
 writeFileSync(indexFile, indexTs);
 
-// Install dependencies
-console.log(chalk.blue("[info] Installing dependencies"));
-execSync("npm i --save-dev typescript", { stdio: "inherit" });
+// Install `jest` dependencies
+console.log(chalk.blue("[info] Installing `jest` dependencies"));
 execSync("npm i --save-dev jest", { stdio: "inherit" });
 execSync("npm i --save-dev @types/jest", { stdio: "inherit" });
 
